@@ -3,6 +3,7 @@ xpanes
 doors
 walls
 stairs
+keys?
 moreblocks?
 glass_stained?
 pkarcs?

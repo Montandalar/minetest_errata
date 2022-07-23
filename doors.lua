@@ -1,3 +1,7 @@
+local key_texture = "default_key.png"
+if minetest.get_modpath("keys") then
+    key_texture = "keys_key.png"
+end
 
 
 doors.register("door_wood_solid", {
@@ -64,7 +68,7 @@ doors.register("door_glass_protected", {
 	tiles = {"doors_door_glass.png"},
 	description = "Protected Glass Door",
 	protected = true,
-	inventory_image = "doors_item_glass.png^(default_key.png^[transformR180FX)",
+	inventory_image = "doors_item_glass.png^(" .. key_texture .. "^[transformR180FX)",
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	sound_open = "doors_glass_door_open",
 	sound_close = "doors_glass_door_close",
@@ -81,7 +85,7 @@ doors.register("door_obsidian_glass_protected", {
 	tiles = {"doors_door_obsidian_glass.png"},
 	description = "Protected Obsidian Glass Door",
 	protected = true,
-	inventory_image = "doors_item_obsidian_glass.png^(default_key.png^[transformR180FX)",
+	inventory_image = "doors_item_obsidian_glass.png^(" .. key_texture .. "^[transformR180FX)",
 	groups = {cracky = 3},
 	sound_open = "doors_glass_door_open",
 	sound_close = "doors_glass_door_close",
@@ -166,7 +170,7 @@ if minetest.get_modpath("moreblocks") then
 		tiles = {{ name = "minetest_errata_door_iron_glass.png", backface_culling = false }},
 		description = "Protected Iron Glass Door",
 		protected = true,
-		inventory_image = "minetest_errata_door_iron_glass_item.png^(default_key.png^[transformR180FX)",
+		inventory_image = "minetest_errata_door_iron_glass_item.png^(" .. key_texture .. "^[transformR180FX)",
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		sounds = default.node_sound_glass_defaults(),
